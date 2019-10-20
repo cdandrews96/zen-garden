@@ -5,11 +5,7 @@
 
 // color palette - these colors will be the color swatches of the Colors section
 
-$color-1: #16052a; // Darker purple - Action color
-$color-2: #230f43; // Dark purple
-$color-3: #0e0043; // Dark navy blue
-$color-4: #0e2760; // Sapphire blue
-$color-5: #f9e190; // Creamy yellow
+@import 'partials/colors'
 
 // additional colors
 
