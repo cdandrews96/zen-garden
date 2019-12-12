@@ -1,13 +1,84 @@
 @import 'variables';
     @mixin mobile {
-        @media (max-width: 599px) { @content; }
+        @media (max-width: 499px) { @content; }
     }
     @mixin tablet {
-        @media (max-width: 999px) { @content; }
+        @media (max-width: 799px) { @content; }
     }
     @mixin desktop {
-        @media (max-width: 1599px) { @content; }
+        @media (max-width: 1499px) { @content; }
     }
     @mixin desktop-large {
-        @media (min-width: 1600px) { @content; }
+        @media (min-width: 1500px) { @content; }
     }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    color: inherit;
+}
+abbr[title] {
+    text-decoration: none;
+}
+.intro header {
+    background-color: $color-5;
+    text-align: center;
+    padding: 5em;
+    @include desktop {    
+        padding: 3.8em; 
+    }
+    @include desktop-large {    
+        padding: 4.2em; 
+    }
+    h1 {
+        font-family: $primary-font;
+        font-size: 1.5em;
+        @include desktop {    
+            font-size: 2.7em; 
+        }
+        @include desktop-large {    
+            font-size: 3.5em; 
+        }
+        @include tablet {    
+            font-size: 2em; 
+        }
+    }
+    h2 {
+        font-family: $secondary-font;
+        font-weight: 400;
+    }
+}
+.summary {
+    background-image: url("../assets/background3.jpg");
+    min-height: 500px; 
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    p {
+        color: $color-5;
+        font-family: $primary-font;
+        text-align: center;
+        width: 50%;
+        position: relative;
+        top: 150px;
+        margin: auto;
+        @include mobile {
+            width: 75%;
+        }
+        a {
+            text-decoration: none;
+            border-bottom: 1px solid $color-5;
+        }
+        &:first-of-type {
+            line-height: 35px;
+            font-size: 1.6em;
+            font-weight: 600;
+            margin-bottom: 10px;
+            @include mobile {
+                font-size: 1.2em;
+            }
+        }
+    }
+}
