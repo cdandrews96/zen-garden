@@ -11,6 +11,17 @@
     @mixin desktop-large {
         @media (min-width: 1500px) { @content; }
     }
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+@mixin fadein-animation {
+    -webkit-animation: fadein 1s ease-in; 
+       -moz-animation: fadein 1s ease-in; 
+        -ms-animation: fadein 1s ease-in; 
+         -o-animation: fadein 1s ease-in; 
+            animation: fadein 1s ease-in;
+}
 * {
     margin: 0;
     padding: 0;
@@ -31,6 +42,9 @@ abbr[title] {
     }
     @include desktop-large {    
         padding: 4.2em; 
+    }
+    h1, h2 {
+        @include fadein-animation;
     }
     h1 {
         font-family: $primary-font;
@@ -62,10 +76,15 @@ abbr[title] {
         text-align: center;
         width: 50%;
         position: relative;
+        @include fadein-animation;
         top: 150px;
         margin: auto;
+        @include tablet {
+            top: 70px;
+        }
         @include mobile {
             width: 75%;
+            top: 125px;
         }
         a {
             text-decoration: none;
@@ -80,5 +99,29 @@ abbr[title] {
                 font-size: 1.2em;
             }
         }
+    }
+}
+.preamble {
+    background-color: $color-1;
+    color: white;
+    font-family: $third-font;
+    min-height: 350px;
+    padding: 3.5em;
+    font-size: 17px;
+    @include mobile {
+        padding: 2em;
+        font-size: 15px;
+    }
+    h3, p {
+        width: 75%;
+        margin: auto;
+    }
+    p {
+        margin-top: 15px;
+    }
+    h3 {
+        margin-bottom: 35px;
+        font-family: $secondary-font;
+        font-size: 25px;
     }
 }
