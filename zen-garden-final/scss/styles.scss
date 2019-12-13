@@ -99,7 +99,7 @@ abbr[title] {
     }
 }
 .summary {
-    min-height: 500px; 
+    min-height: 550px; 
     @include parallax;
     @include mobile {min-height: 400px;}
     p {
@@ -118,9 +118,9 @@ abbr[title] {
         width: 50%;
         position: relative;
         @include fadein-scroll-animation;
-        top: 150px;
+        top: 165px;
         margin: auto;
-        @include tablet {top: 70px;}
+        @include tablet {top: 120px;}
         @include mobile {
             width: 75%;
             top: 80px;
@@ -140,7 +140,7 @@ abbr[title] {
     width: 100%;
     font-family: $third-font;
     min-height: 340px;
-    padding: 3.4em;
+    padding: 3em;
     font-size: 18px;
     @include mobile {
         padding: 2em;
@@ -148,6 +148,9 @@ abbr[title] {
     }
     h3, p {
         width: 50%;
+        @include tablet {
+            width: 85%;
+        }
         margin-left: 20px;
     }
     p {
@@ -228,14 +231,39 @@ abbr[title] {
 }
 .sidebar {
     position: absolute;
-    top: 95vh;
-    width: 27%;
-    min-height: 70vh;
-    background-color: #495880;
+    top: 100vh;
+    width: 30%;
+    color: white;
+    background-color: $color-2;
     left: 60%;
-    padding: 3em;
+    padding: 2.5em;
+    @include desktop {
+        padding: 2.2em;
+        width: 37%;
+    }
+    @include tablet {
+        position: static;
+        width: 100%;
+    }
+    a {
+        &:after {
+            background-color: white;
+        }
+        &:hover {
+            color: $color-2;
+        }
+    }
+    div {
+        margin-bottom: 25px;
+    }
+    h3 {
+        font-family: $secondary-font;
+        font-size: 25px;
+        margin-bottom: 5px;
+    }
     li {
         list-style-type: none;
+        font-family: $primary-font;
     }
 }
 footer {
@@ -244,9 +272,9 @@ footer {
     font-size: 17px;
     color: $color-5;
     font-family: $primary-font;
-    font-weight: 300;
+    font-weight: 600;
     a {
-        margin: 0 20px;
+        margin: 0 40px;
         padding: 3px;
         @include mobile {
             margin: 0 10px;
