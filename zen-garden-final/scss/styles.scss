@@ -1,4 +1,12 @@
-@import 'variables';
+@import url('https://fonts.googleapis.com/css?family=Lora:400|Poppins:300,600,900|Roboto&display=swap');
+$primary-font: 'Poppins', sans-serif;
+$secondary-font: 'Lora', serif; 
+$third-font: 'Roboto', sans-serif;
+$color-1: #29324a; 
+$color-2: #50618f;
+$color-3: #332b52; 
+$color-4: #354059; 
+$color-5: #FCF1CC; 
     @mixin mobile {
         @media (max-width: 699px) { @content; }
     }
@@ -79,7 +87,7 @@ a {
         width: 100%;
         height: 1px;
         content: '';
-        visibility: none;
+        visibility: hidden;
         opacity: 0;
         z-index: -1;
     }
@@ -280,8 +288,8 @@ footer {
         margin: 0 40px;
         font-size: 20px;
         @include mobile {
-            font-size: 17px;
-            margin: 0 9px;
+            font-size: 15px;
+            margin: 0 7px;
         }
         @include hover-link($color-5, black);
         padding: 3px;
@@ -290,7 +298,7 @@ footer {
 .extra1 {
     @include fadein-scroll-animation;
     position: absolute;
-    top: 20px;
+    top: 25px;
     right: 50%;
     width: 53px;
 	height: 53px;
@@ -304,7 +312,7 @@ footer {
     @include tablet {
         width: 40px;
         height: 40px;
-        box-shadow: 12px 7px 0px 0px black; 
+        box-shadow: 12px 6px 0px 0px black; 
     }
     @include mobile {
         width: 38px;
